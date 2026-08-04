@@ -1,16 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        
-    </style>
+    <title>Git Branch Practice</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>github기초</h1>
-    <p>브랜치를 나누고 다시 합치는 과정을 통해 깃허브로 협업하는 방법을 배울 수 있습니다.</p>
-    <button>연습해보기</button>
+
+    <!-- header 브랜치에서 수정하기 좋은 영역 -->
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo"><a href="#">BRANCH LAB</a></h1>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about">git이란</a></li>
+                    <li><a href="#practice">git 문법</a></li>
+                    <li><a href="#practice">git 브랜치</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- content 브랜치에서 수정하기 좋은 영역 -->
+        <section class="hero" id="about">
+            <div class="inner">
+                <p class="eyebrow">GIT BRANCH PRACTICE</p>
+                <h2>브랜치를 나누고<br>다시 하나로 합쳐보세요.</h2>
+                <p class="hero-text">
+                    header, content, footer 영역을 각각 수정하면서
+                    브랜치 생성, 전환, 병합을 연습하는 간단한 웹 페이지입니다.
+                </p>
+                <a href="#practice" class="button">연습 방법 보기</a>
+            </div>
+        </section>
+
+        <section class="practice" id="practice">
+            <div class="inner">
+                <div class="section-title">
+                    <p>STEP BY STEP</p>
+                    <h2>브랜치 연습 순서</h2>
+                </div>
+
+                <div class="card-list">
+                    <article class="card">
+                        <span>01</span>
+                        <h3>브랜치 생성</h3>
+                        <p>새 기능을 작업할 브랜치를 생성합니다.</p>
+                        <code>git switch -c feature/header</code>
+                    </article>
+
+                    <article class="card">
+                        <span>02</span>
+                        <h3>파일 수정</h3>
+                        <p>헤더의 로고나 메뉴 내용을 변경합니다.</p>
+                        <code>git add .</code>
+                    </article>
+
+                    <article class="card">
+                        <span>03</span>
+                        <h3>커밋 저장</h3>
+                        <p>수정한 내용을 하나의 작업 기록으로 남깁니다.</p>
+                        <code>git commit -m "header 수정"</code>
+                    </article>
+
+                    <article class="card">
+                        <span>04</span>
+                        <h3>브랜치 병합</h3>
+                        <p>main 브랜치로 이동한 뒤 작업 내용을 합칩니다.</p>
+                        <code>git merge feature/header</code>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer 브랜치에서 수정하기 좋은 영역 -->
+    <footer class="footer" id="contact">
+        <div class="inner">
+            <div>
+                <strong>BRANCH LAB</strong>
+                <p>Git과 GitHub를 연습하는 작은 프로젝트</p>
+            </div>
+            <p class="copyright">© 2026 Branch Lab</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
